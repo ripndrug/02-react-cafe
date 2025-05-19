@@ -15,9 +15,9 @@ export default function App() {
   });
 
   const totalVotes: number = votes.good + votes.neutral + votes.bad;
-  const positiveRate: string = totalVotes
-    ? Math.round((votes.good / totalVotes) * 100) + '%'
-    : 0 + '%';
+  const positiveRate: number = totalVotes
+    ? Math.round((votes.good / totalVotes) * 100)
+    : 0;
 
   function handleVote(type: VoteType) {
     setVotes({
